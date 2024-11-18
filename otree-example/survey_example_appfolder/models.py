@@ -9,11 +9,11 @@ from otree.api import (
     currency_range,
 )
 
-author = 'your names and team objective go here'
-doc = 'Your app description goes here'
+author = 'Me'
+doc = 'Test Survey for Seminar'
 
 class Constants(BaseConstants):
-    name_in_url = 'survey-example'
+    name_in_url = 'survey-test-seminar'
     players_per_group = None
     num_rounds = 1
 
@@ -26,8 +26,21 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    #this is the most important feature of this file. We can collect all the variables used on the html pages here
+
+    numeric_question = models.IntegerField()
+
+    float_question = models.FloatField()
+
+    opentext_question = models.TextField()
     
-#The Variables are structured on the base of pages
-    entry_question = models.StringField()
-    age_question = models.IntegerField()                          
+    mc_question = models.CharField(
+        choices=(
+            ('A', 'First Option'),
+            ('B', 'Second Option'),
+            ('C', 'Third Option'),
+            ('D', 'Fourth Option'),
+        ),
+        default='A',  # Default option, if applicable
+    )
+
+    yes_no_question = models.BooleanField(default=False)
