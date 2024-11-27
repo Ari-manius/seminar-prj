@@ -1,0 +1,11 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block app_scripts %}
+
+<script>
+    var time = new Date(); 
+    var time = time.toISOString(); 
+    document.getElementById('time_additional_comments').value = time; 
+</script>
+{% endblock %}

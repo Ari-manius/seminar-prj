@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<br>
+    <hr>
+    <!-- Field for the name -->
+     <!--code for adding the image, make sure the image is stored at the right place-->
+    <img   width="50%" height="50%" src="{% static 'images/duck.png' %}" />
+    <br>
+
+
+    
+<p><b>How much does this look like a duck?</b></p>
+<input type="radio" name="duck" value="1" /> 1
+<br>
+<input type="radio" name="duck" value="2" /> 2
+<br>
+<input type="radio" name="duck" value="3" /> 3
+<br>
+<input type="radio" name="duck" value="4" /> 4
+<br>
+<input type="radio" name="duck" value="5" /> 5
+<br>
+<br>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">
+    Next
+</button>
+</button>
+
+{% endblock %}
