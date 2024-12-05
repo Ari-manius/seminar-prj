@@ -6,35 +6,54 @@
     <title>Survey Completed</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f8ff;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: #ffffff;
         }
         .message-box {
             text-align: center;
-            padding: 20px;
-            border: 2px solid #0078d7;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .message-box:hover {
+            transform: translateY(-5px);
         }
         .message-box h1 {
-            color: #0078d7;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .message-box p {
-            color: #333333;
             font-size: 1.2em;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .message-box {
+                padding: 20px;
+            }
+            .message-box h1 {
+                font-size: 2em;
+            }
+            .message-box p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="message-box">
-        <h1>Thank you!</h1>
-        <p>Thanks for completing the survey!</p>
+        <h1>Thank You!</h1>
+        <p>Your response has been recorded. We appreciate your time!</p>
     </div>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Closed</title>
+    <style>
+        body {
+            font-family: 'Verdana', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            color: #444444;
+        }
+        .message-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            max-width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .message-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .message-box h1 {
+            font-size: 1.8em;
+            color: #ff7b54;
+            margin-bottom: 10px;
+        }
+        .message-box p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: #555555;
+        }
+        @media (max-width: 768px) {
+            .message-box {
+                padding: 15px;
+            }
+            .message-box h1 {
+                font-size: 1.5em;
+            }
+            .message-box p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Survey Completed</h1>
+        <p>Thank you for your interest! Unfortunately, the quota for your profile is already full. We truly appreciate your effort.</p>
+    </div>
+</body>
+</html>
